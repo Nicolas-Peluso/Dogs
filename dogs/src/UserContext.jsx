@@ -8,6 +8,7 @@ export function UserStorage({ children }) {
     const [login, setLogin] = React.useState(null)
     const [Loading, setLoading] = React.useState(false)
     const [Erro, setErro] = React.useState(false)
+
     const navigate = useNavigate()
     React.useEffect(() => {
         async function TESTING() {
@@ -34,6 +35,8 @@ export function UserStorage({ children }) {
                 }
                 if (response.data.status === 200)
                     getUser(token)
+            } else {
+                setLogin(false)
             }
         }
         TESTING()

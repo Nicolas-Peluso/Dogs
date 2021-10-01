@@ -8,9 +8,10 @@ import LoginResetar from './LoginResetar'
 import Style from "./Login.module.css"
 function Longin() {
     const { login } = React.useContext(UserContext)
-    console.log(login)
-    if (login)
+
+    if (login) {
         <Navigate to="/conta" />
+    }
     return (
         <section className={Style.login}>
             <div className={Style.form}>

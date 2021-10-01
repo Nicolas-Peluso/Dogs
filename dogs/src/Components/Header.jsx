@@ -5,7 +5,7 @@ import { ReactComponent as Logo } from "../Assets/dogs.svg"
 import { UserContext } from "../UserContext"
 function Header() {
     const { login, data, logout } = React.useContext(UserContext)
-
+    console.log(login)
     return (
         <header className={Style.Header}>
             <nav className={`${Style.Nav} container`}>
