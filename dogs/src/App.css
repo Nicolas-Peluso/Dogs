@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@600&display=swap');
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    padding-top: 4rem;  
+    margin: 0px;
+    color: #333;
+    --type-first: Helvetica, Arial, sans-serif;
+    --type-second:'Spectral', georgia;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul,li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img{
+    display: block;
+    max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+button, input{
+    display: block;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    font-family: var(--type-first);
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.title{
+    font-family: var(--type-second);
+    font-size: 3rem;
+    line-height: 1;
+    margin: 1rem 0;
+    position: relative;
+    font-weight: bold;
+    z-index: 1;
+    padding: 20px;
+}
+.title::after{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color:  #fb1;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    border-radius: .2rem;
+    z-index: -1;
+}
+
+.animeLeft{
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: animaLe .1s forwards;
+}
+
+@keyframes animaLe {
+    to{
+        opacity: 1;
+        transform: initial;
+    }
 }

@@ -1,0 +1,29 @@
+.ShowPass{
+    display: flex;
+    padding:  0 0 .7rem 0;
+}
+.form{
+    margin-bottom: 2rem;
+}
+.Perdeu{
+    display: inline-block;
+    color: #666;
+    padding: .5rem;
+    line-height: 1;
+}
+
+.Perdeu::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    display: block;
+    background: currentColor;
+}
+.cadastro{
+    margin-top: 4rem;
+}
+
+.cadastro p{
+    margin:  2rem 0;
+}
+

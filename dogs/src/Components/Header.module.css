@@ -1,0 +1,39 @@
+.Header{
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    padding: .5rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    top: 0;   
+}
+
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.Logo{
+    padding: 0.5rem 0;
+}
+
+.Login{
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.Login::after{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 17px;
+    background: url('../Assets/usuario.svg');
+    background-repeat: no-repeat;
+    margin-left: .5rem;
+    position: relative;
+    top: -1px;
+
+}
