@@ -1,0 +1,118 @@
+.Nav{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.Nav a,
+.Nav button{
+    background-color: #eee;
+    border-radius:  .2rem;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.Nav a:hover,
+.Nav a:focus,
+.Nav button:hover,
+.Nav button:focus{
+    background-color: white;
+    box-shadow: 0 0 0 3px #eee;
+    border-color: rgb(255, 153, 0);
+    outline: none;
+}
+
+.active{
+    background-color: white;
+    box-shadow: 0 0 0 3px #fea;
+    border-color: #fb1;
+}
+
+svg:focus{
+    color: #fb1;
+}
+
+.mobilebutton{
+    background-color: #eee;
+    border-radius:  .2rem;
+    height: 40px;
+    padding: 0px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.mobilebutton::after{
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2px;
+    border-radius: 3px;
+    background: currentColor;
+    box-shadow: 0 6px 0 currentColor, 0 -6px 0 0 currentColor;
+    transition: .2s;
+}
+
+.mobilebutton:focus,
+.mobilebutton:hover{
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px #fea;
+    border-color: #fb1;
+    color: #fb1;
+}
+
+.mobilebutton:focus.ativo::after{
+    transform: rotate(-90deg);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+.Mobile{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    padding: 0 1rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0,0.2  );
+    border-radius: .2rem;
+    transform: translateX(-10px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Mobile a,
+.Mobile button{
+    display: flex;
+    align-items: center;
+    background: none;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.Mobile a:hover svg > *,
+.Mobile button:hover svg > *{ 
+    fill: #fb1;
+}
+
+.mobileAtivo{
+    transition: .3s;
+    transform: initial;
+    opacity: 1;
+    z-index: 100;
+    pointer-events: initial;
+}

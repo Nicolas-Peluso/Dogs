@@ -9,6 +9,12 @@ const Types = {
     senha: {
         regex: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
         message: "a senha deve conter: uma letra. um numero e 8(oito) caracter "
+    },
+    Idade: {
+        message: "idade deve ser um numero"
+    },
+    peso: {
+        message: "peso deve ser um numero (sem 'KG')"
     }
 }
 
@@ -23,12 +29,19 @@ function useForm(type) {
         setValue(target.value)
     }
 
-    function validate() {
+    function validate(value) {
         if (value.length === 0) {
             setError("digite um valor")
             return false
         }
         if (type === false) return true
+        if (type === "Idade" || type === "peso") {
+            if (isNaN(value)) {
+                setError(Types[type].message)
+                return true
+            }
+            return true
+        }
         else if (Types[type] && !Types[type].regex.test(value)) {
             setError(Types[type].message)
         } else {
