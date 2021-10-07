@@ -64,9 +64,10 @@ export function PHOTO_POST(formData, token) {
     }
 }
 
-export function PHOTOS_GET(page, total, user) {
+export function PHOTOS_GET({ page, total, user }) {
+
     return {
-        url: `${API_URL}api/photo`,
+        url: `${API_URL}api/photo/?_total=${total}&_page=${page}&_user=${user}`,
         option: {
             method: 'GET',
             cache: 'no-store'
@@ -80,6 +81,35 @@ export function PHOTO_GET(id) {
         option: {
             method: 'GET',
             cache: 'no-store'
+        }
+    }
+}
+
+export function COMMENT_POST(comentario, id) {
+    const tok = localStorage.getItem("TOKEN")
+    return {
+        url: API_URL + `api/comment/${id}`,
+        options: {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer' + tok
+            },
+            body: JSON.stringify(comentario)
+
+        }
+    }
+}
+
+export function PHOTO_DELETE(id) {
+    const tok = localStorage.getItem("TOKEN")
+    return {
+        url: API_URL + `api/photo/${id}`,
+        options: {
+            method: "DELETE",
+            headers: {
+                Authorization: 'Bearer' + tok
+            }
         }
     }
 }

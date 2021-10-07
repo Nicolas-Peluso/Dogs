@@ -10,7 +10,7 @@
     cursor: pointer; 
 }
 
-.photo img{
+.photo div{
     grid-area: 1 / 1;
 }
 
@@ -40,7 +40,7 @@
     margin-right: 5px;
 }
 
-@media (max-width: 40rem){
+@media(max-width: 40rem){
     .photo:nth-child(2){
         grid-column: initial;
         grid-row: initial;

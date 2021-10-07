@@ -7,6 +7,7 @@ import Longin from './Components/Login/Longin'
 import "./App.css"
 import { UserStorage } from './UserContext'
 import User from "./Components/usuario/Use"
+import Photo from './Components/Photo/Photo'
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="login/*" element={<Longin />} />
                         <Route path="conta/*" element={<User />} />
+                        <Route path="foto/:id" element={<Photo />} />
                     </Routes>
                     <Footer />
                 </UserStorage>

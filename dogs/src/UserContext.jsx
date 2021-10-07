@@ -10,6 +10,7 @@ export function UserStorage({ children }) {
     const [Erro, setErro] = React.useState(false)
 
     const navigate = useNavigate()
+
     React.useEffect(() => {
         async function TESTING() {
             const token = localStorage.getItem("TOKEN")

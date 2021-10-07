@@ -8,7 +8,7 @@ function InputLoginComponent({ type, value, label, onChange, erro, onBlur }) {
             <label className={Style.label}>
                 {label}
             </label>
-            <input type={type} value={value} className={Style.Input} className={Style.input}
+            <input type={type} value={value} className={Style.input}
                 onChange={onChange} onBlur={onBlur} />
             {erro && <p className={Style.Erro}>{erro}</p>}
         </div>

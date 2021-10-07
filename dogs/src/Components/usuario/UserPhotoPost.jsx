@@ -48,7 +48,7 @@ function UserPhotoPost() {
                 <InputComponent label="Nome" type="text" name="Nome" {...nome} />
                 <InputComponent label="Peso" type="number" name="Peso" {...peso} />
                 <InputComponent label="idade" type="number" name="idade" {...Idade} />
-                <input className={Style.file} type="file" name="img" name="img" onChange={handleImgChange} />
+                <input className={Style.file} type="file" name="img" onChange={handleImgChange} />
                 {Loading ? <ButtonForm disabled style={{ opacity: .5 }}>Enviando</ButtonForm> :
                     <ButtonForm>Postar</ButtonForm>}
             </form>

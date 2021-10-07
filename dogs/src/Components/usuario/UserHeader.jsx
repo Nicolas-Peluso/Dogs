@@ -7,7 +7,6 @@ function UserHeader() {
     const location = useLocation()
 
     const [title, setTitle] = React.useState('')
-    console.log(location)
 
     React.useEffect(() => {
         const { pathname } = location
@@ -21,6 +20,8 @@ function UserHeader() {
             case "/conta/postar":
                 setTitle("postar Foto")
                 break;
+            default:
+                setTitle("Sorry Something was wrong")
         }
     }, [location])
 

@@ -20,13 +20,14 @@ function useFetch() {
         } finally {
             setLoading(false)
             setData(response)
-            return { response }
+            return { response, res }
         }
     }, [])
 
     return {
         data,
         erro,
+        setData,
         Loading,
         request,
     }

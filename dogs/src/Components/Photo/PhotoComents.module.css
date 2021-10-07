@@ -1,0 +1,11 @@
+.AuthorName{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.ComentarioContainer{
+    overflow-y: auto;
+    word-break: break-word;
+    padding: 1.2rem;
+}
+

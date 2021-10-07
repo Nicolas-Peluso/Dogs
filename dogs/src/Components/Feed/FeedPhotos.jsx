@@ -6,16 +6,20 @@ import ErrorComponent from "../helper/ErrorComponete"
 import Carregando from "../helper/Carregando"
 import Style from "./FeedPhotos.module.css"
 
-function FeedPhotos({ setModalPhoto }) {
+function FeedPhotos({ setModalPhoto, user, page, setInfinite }) {
     const { Loading, data, erro, request } = useFetch()
 
     React.useEffect(() => {
         async function FetchPhotos() {
-            const { url, option } = PHOTOS_GET({ page: 2, total: 6, user: 0 })
-            request(url, option)
+            const total = 6
+            const { url, option } = PHOTOS_GET({ page, total, user })
+            const { res, response } = await request(url, option)
+            if (res && res.ok && response.length < total) {
+                setInfinite(false)
+            }
         }
         FetchPhotos()
-    }, [])
+    }, [request, setInfinite, user, page])
 
     if (erro) return <ErrorComponent error={erro} />
     if (Loading) return <Carregando />
@@ -24,7 +28,7 @@ function FeedPhotos({ setModalPhoto }) {
         return (
             <>
                 <ul className={Style.Feed}>
-                    {data.map(foto => <FeedPhotosItem foto={foto} key={foto.id} setModalPhoto={setModalPhoto} />)}
+                    {data.map(foto => <FeedPhotosItem foto={foto} id={foto.id} setModalPhoto={setModalPhoto} />)}
 
                 </ul>
 
