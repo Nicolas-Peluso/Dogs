@@ -10,7 +10,7 @@ function Longin() {
     const { login } = React.useContext(UserContext)
 
     if (login) {
-        <Navigate to="/conta" />
+        return <Navigate to="/conta" />
     }
     return (
         <section className={Style.login}>

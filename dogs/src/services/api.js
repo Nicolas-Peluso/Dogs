@@ -18,7 +18,7 @@ export function GET_USER(token) {
     return {
         url: API_URL + 'api/user',
         option: {
-            mathod: 'POST',
+            method: 'POST',
             headers: {
                 Authorization: 'Bearer' + token,
             }

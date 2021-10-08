@@ -13,6 +13,16 @@
     animation: showUp .5s forwards;
 }
 
+.single.photo{
+    grid-template-columns: 1fr;
+    height: auto;
+}
+
+.img{
+    grid-row: 1 / 4;
+}
+
+
 @keyframes showUp {
     to{
         transform: initial;
@@ -26,6 +36,17 @@
 
 .img{
     grid-row: 1 / 4;
+}
+
+.single .img{
+    grid-row: 1;
+    border-radius: .1rem;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.single .details{
+    padding: .2rem 40px;
 }
 
 .author{

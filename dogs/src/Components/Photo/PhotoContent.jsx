@@ -7,7 +7,7 @@ import { PHOTO_DELETE } from "../../services/api"
 import useFetch from '../../Hook/useFetch'
 import Image from '../helper/Image'
 
-function PhotoContent({ datad }) {
+function PhotoContent({ datad, single }) {
     const { login, data } = React.useContext(UserContext)
     const { request, Loading } = useFetch()
     const navigate = useNavigate()
@@ -21,7 +21,7 @@ function PhotoContent({ datad }) {
 
     return (
         <>
-            {datad && <div className={Style.photo}>
+            {datad && <div className={`${Style.photo} ${single ? Style.single : ''}`}>
                 <dir className={Style.img}>
                     <Image src={datad.photo.src} alt={datad.photo.title} />
                 </dir>

@@ -25,7 +25,7 @@ function Photo() {
     if (data)
         return (
             <section className="container">
-                <PhotoContent datad={data} />
+                <PhotoContent datad={data} single={true} />
             </section>
         )
 
