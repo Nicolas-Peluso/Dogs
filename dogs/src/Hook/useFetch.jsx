@@ -14,12 +14,12 @@ function useFetch() {
             res = await fetch(url, options)
             response = await res.json()
             if (res.ok === false) throw new Error(response.message)
+            setData(response)
         } catch (erro) {
-            setErro(erro.message)
+            setErro(erro)
             setLoading(false)
         } finally {
             setLoading(false)
-            setData(response)
             return { response, res }
         }
     }, [])

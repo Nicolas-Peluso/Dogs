@@ -18,7 +18,7 @@ export function GET_USER(token) {
     return {
         url: API_URL + 'api/user',
         option: {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 Authorization: 'Bearer' + token,
             }
@@ -107,6 +107,44 @@ export function PHOTO_DELETE(id) {
         url: API_URL + `api/photo/${id}`,
         options: {
             method: "DELETE",
+            headers: {
+                Authorization: 'Bearer' + tok
+            }
+        }
+    }
+}
+
+export function PASSWORD_LOST(body) {
+    return {
+        url: API_URL + `api/password/lost`,
+        options: {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        }
+    }
+}
+export function PASSWORD_RESET(body) {
+    return {
+        url: API_URL + `api/password/reset`,
+        options: {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        }
+    }
+}
+
+export function STATS_GET() {
+    const tok = localStorage.getItem("TOKEN")
+    return {
+        url: API_URL + `api/stats`,
+        options: {
+            method: "GET",
             headers: {
                 Authorization: 'Bearer' + tok
             }

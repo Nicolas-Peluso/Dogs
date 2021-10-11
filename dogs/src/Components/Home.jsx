@@ -1,11 +1,11 @@
 import React from 'react'
 import Feed from "../Components/Feed/Feed"
-import Carregando from './helper/Carregando'
+import Head from './helper/Head'
 
 function Home() {
     return (
         <section className="container mainContainer">
-
+            <Head title="Fotos" />
             <Feed />
         </section>
     )

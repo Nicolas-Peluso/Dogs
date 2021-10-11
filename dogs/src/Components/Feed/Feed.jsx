@@ -35,6 +35,7 @@ function Feed({ user }) {
     const [ModalPhoto, setModalPhoto] = React.useState(null)
     return (
         <section>
+
             {ModalPhoto && <FeedModal foto={ModalPhoto} setModal={setModalPhoto} />}
 
             {pages.map(pagi => (

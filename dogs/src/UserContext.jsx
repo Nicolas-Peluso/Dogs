@@ -56,7 +56,6 @@ export function UserStorage({ children }) {
         const { url, options } = TOKEN_POST({ username, password })
         let request;
         let json;
-
         try {
             setLoading(true)
             setLogin(false)
@@ -73,6 +72,8 @@ export function UserStorage({ children }) {
         } finally {
             setLoading(false)
             setData(json)
+            console.log(password)
+            console.log(username)
         }
     }
 

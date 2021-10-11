@@ -6,6 +6,8 @@ import LoginForm from './LoginForm'
 import LoginPasswordLost from './LoginPasswordLost'
 import LoginResetar from './LoginResetar'
 import Style from "./Login.module.css"
+import NotFound from '../NotFound'
+import Head from '../helper/Head'
 function Longin() {
     const { login } = React.useContext(UserContext)
 
@@ -14,12 +16,14 @@ function Longin() {
     }
     return (
         <section className={Style.login}>
+            <Head title="login" />
             <div className={Style.form}>
                 <Routes>
                     <Route path="/" element={<LoginForm />} />
                     <Route path="criar" element={<LoginCreate />} />
                     <Route path="perdeu" element={<LoginPasswordLost />} />
                     <Route path="resetar" element={<LoginResetar />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
         </section>
