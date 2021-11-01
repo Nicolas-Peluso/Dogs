@@ -11,7 +11,6 @@ no começo do curso ele nos disse:
 "esse não é um curso rapido, ou que va ir direto ao ponto. E sim um curso que: rodeia,volta e demonstra o Ponto". E agora no final do curso posso dizer que ele nunca esteve tão certo.
 
 Obrigado professor.
-
 <div>
     <h2>O que Foi Ensinado Nesse Jornada?</h2>
     <p>abaixo vou deixar apenas os topicos estudados nao conseguirei deixar
