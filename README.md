@@ -11,120 +11,77 @@ no começo do curso ele nos disse:
 "esse não é um curso rapido, ou que va ir direto ao ponto. E sim um curso que: rodeia,volta e demonstra o Ponto". E agora no final do curso posso dizer que ele nunca esteve tão certo.
 
 Obrigado professor.
-    <h2>O que Foi Ensinado Nesse Jornada?</h2>
-    <p>abaixo vou deixar apenas os topicos estudados nao conseguirei deixar
-        as anotações pois faço anotações em cadernos e os testes estão aqui
-        nos projetos: ToDoList, Ecomerce, Filmer, e Dogs
-    </p>
-    <ul>
-        <li>
-            <h3>Revisitando conceitos basicos de js</h3>
-            <ul>
-                <li>
-                    Destruturing
-                </li>
-                <li>
-                    Rest and Spread
-                </li>
-                <li>
-                    Array
-                    <ol>
-                        <li>
-                            metodos reduce,filter,map,fill etc..
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    export / import Module
-                </li>
 
-                <li>
-                    fetch
-                </li>
-            </ul>
-        </li>
+# O que Foi Ensinado Nesse Jornada?
+abaixo vou deixar apenas os topicos estudados nao conseguirei deixar
+    as anotações pois faço anotações em cadernos e os testes estão aqui
+    nos projetos: ToDoList, Ecomerce, Filmer, e Dogs
 
-        <li>
-            WebPack e babel
-        </li>
+# Revisitando conceitos basicos de js
+    
+- Destruturing
+   
+- Rest and Spread   
+- Array
+1. reduce
+2. filter
+3. map
+4. fill
+- export / import Module
 
-        <li>introdução ao conceito de reatividade</li>
+- fetch
+       
+- WebPack e babel
 
-        <li>
-            <h3>React Hooks</h3>
-            <p>CustomHooks foi a parte que me deixou de boca aberta sobre como isso cria um luque GIGANTE de
-                possibilidades</p>
-            <ol>
-                <li>O que sao hooks</li>
-                <li>useState</li>
-                <li>useRef</li>
-                <li>useEffect</li>
-                <li>useCallback</li>
-                <li>useMemo</li>
-                <li>
-                    <ol>CustomHooks
-                        <li>useLocalStorage</li>
-                        <li>useForm</li>
-                        <li>useFetch</li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
+- introdução ao conceito de reatividade
 
-        <li>
-            <h3>Formulario</h3>
-            <p>esse foi a parte mais legal criamos um quiz usando formulario e ficou bem bacana</p>
-            <p>aqui aprendemos a lidar com estados em inputs</p>
-            <ol>
-                <li>checkBox</li>
-                <li>componente de checkBox</li>
-                <li>input text</li>
-                <li>componente de input</li>
-                <li>radio</li>
-                <li>componente de radio</li>
-                <li>textarea</li>
-                <li>Validação de formulario</li>
-            </ol>
-        </li>
+# React Hooks
+CustomHooks foi a parte que me deixou de boca aberta sobre como isso cria um luque GIGANTE de possibilidades
+    
+- O que sao hooks
+- useState
+- useRef
+- useEffect
+- useCallback
+- useMemo
 
-        <li>
-            <h3>mais react</h3>
-            <ol>
-                <li>
-                    lazy e suspense
-                </li>
-                <li>
-                    memo
-                </li>
-                <li>
-                    propTypes
-                </li>
-                <li>
-                    useReducer
-                </li>
-            </ol>
-        </li>
+# CustomHooks
+1. useLocalStorage
+2. useForm
+3. useFetch
 
-        <li>
-            <h3>css</h3>
-            <ol>
-                <li>animation</li>
-                <li>css module</li>
-                <li>css import</li>
-                <li>css Style component</li>
-                <li>svg</li>
-            </ol>
-        </li>
+# Formulario
+   esse foi a parte mais legal criamos um quiz usando formulario e ficou bem bacana
+   aqui aprendemos a lidar com estados em inputs
+   
+1. checkBox
+2. componente de checkBox
+3. input text
+4. componente de input
+5. radio
+6. componente de radio
+7. textarea
+8. Validação de formulario
+   
+# mais react
+        
+- lazy e suspense
+- memo
+- propTypes
+- useReducer
 
-        <li>
-            <h3>React Router Dom</h3>
-            <ol>
-                <li>Rotas</li>
-                <li>Link</li>
-                <li>useParams</li>
-                <li>NavLinks</li>
-                <li>UseLocation</li>
-                <li>NavLinks</li>
-            </ol>
-        </li>
-    </ul>
+# css
+- animation
+- css module
+- css import
+- css Style component
+- svg
+
+# React Router Dom
+   
+- Rotas
+- Link
+- useParams
+- NavLinks
+- UseLocation
+- NavLinks
